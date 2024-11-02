@@ -1,0 +1,435 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    z-index: 50;
+    background-color: #E7FAF6;
+}
+
+/* search */
+.search {
+    border-radius: 10px;
+    flex: 1;
+    width: 600px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    margin-left: -60px;
+  }
+  
+  .search input {
+    border: 2px solid #C0EEE4; 
+  }
+  
+  /* button search */
+  .search .btn{ 
+    border-radius: 10px;
+    color: white;
+    background-color: #41EBC6;
+    margin-left: 0px;
+    width: 40px; 
+    height: 40px; 
+  }
+/*Search End*/
+
+
+#logoHeader{
+    background-color: #E7FAF6;
+    color :#E7FAF6;
+}
+
+#conheader{
+    background-color: #E7FAF6;
+    color :#E7FAF6;
+}
+
+
+body header{
+    background-color: #E7FAF6;
+}
+
+
+header .container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #E7FAF6;
+    padding-top : 10px;
+}
+
+/*Sidebar*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background: #E7FAF6;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.logo .menu-icon {
+    color: #333;
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.logo .logo-name {
+    color: #333;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+nav .sidebar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #FFF;
+    height: 100%;
+    width: 260px;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+nav.open .sidebar {
+    left: 0;
+}
+
+.sidebar .sidebar-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+
+.sidebar-content .list {
+    list-style: none;
+}
+
+.list .nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+.nav-link .icon {
+    margin-right: 14px;
+    font-size: 20px;
+    color: #595959;
+}
+
+.nav-link .link {
+    font-size: 16px;
+    color: #595959;
+    font-weight: 400;
+}
+
+.lists .nav-link:hover {
+    background-color: #6DD6BF;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+    color: #FFF;
+}
+
+.nav-link:hover {
+    background-color: #E44E4E;
+}
+
+.nav-link:hover .icon,
+.nav-link:hover .link {
+    color: #FFF;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 1000vh;
+    width: 200%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+nav.open ~ .overlay {
+    opacity: 1;
+    left: 260px;
+    pointer-events: auto;
+}
+
+/*sidebar end*/
+
+img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+header .logo {
+    flex: 1;
+    margin-right: 100px;
+    font-size: 30px;
+}
+  
+
+#button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; 
+}
+
+.custom-button1 {
+    width: 100px; 
+    height: 40px; 
+    background-color: #85DAC8;
+    border : transparent;
+}
+
+.custom-button2 {
+    width: 100px; 
+    height: 40px; 
+    background-color: #E29578;
+    border : transparent;
+}
+
+/*Header End*/
+/* body mulai */
+#conbody{
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+    padding-left: 17%;
+    padding-top: 7px;
+}
+
+
+.text-color{
+  color: black; /* Ganti dengan warna yang Anda inginkan untuk teks */
+  display: inline; /* Memastikan teks tetap berada di sebelah ikon */
+}
+ .custom-scrollbar {
+    max-height: 350px; /* Sesuaikan dengan tinggi maksimal yang Anda inginkan */
+    overflow-y: auto;
+}
+
+#detail{
+    padding-top:30px;
+   
+}
+
+/* Menyembunyikan scrollbar pada elemen saat tidak dihover */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 0.5em;
+    overflow-y: 350px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+
+/* Menampilkan scrollbar saat elemen dihover */
+.custom-scrollbar:hover::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+.info-section2{
+  margin-top: 20px;
+}
+.info-section3{
+  margin-top: 20px;
+}
+.bordered-icon {
+  border: 1px solid #6DD6BF;
+  width: 185px;
+  height: 39px;
+  top: 643px;
+  left: 819px;
+  border-radius: 11px; /* Untuk membuat ikon dengan border bulat */
+  padding: 5px; /* Jika Anda ingin menambahkan ruang di sekitar ikon */
+  display: block;
+}
+
+/*
+#fasilitas{
+    padding-bottom: -50px;
+}
+*/
+h4{
+    padding-top: 20px;
+}
+
+#harga{
+   padding-left: 40px;
+   
+}
+.dropdown {
+  margin: 5px; /* Atur margin untuk elemen dropdown */
+  
+}
+
+.dropdown-menu {
+  padding: 5px; /* Atur padding untuk elemen dropdown menu */
+}
+
+.dropdown-item {
+  margin: 2px; /* Atur margin untuk elemen dropdown item */
+}
+
+
+
+
+h6 {
+    padding-top: 30px;
+}
+
+
+
+/* body selesai */
+
+
+/* footer start/ */
+.footer{
+	background-color: #E7FAF6;
+    color: #000000;
+    padding: 20px 0;
+    margin-top: 50px;
+    position: static; 
+    bottom: 0;
+}
+
+.logo-footer img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.footer-col {
+    flex: 1;
+    margin: 0 40px;
+    
+}
+
+.footer-col a {
+    text-decoration: none; /* Menghapus garis bawah */
+    color: #333; /* Mengganti warna teks */
+    font-weight: normal; /* Mengganti ketebalan font (misalnya, menjadi normal) */
+}
+
+.logo-footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.footer-col h4{
+	font-size: 18px;
+	color: #000000;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul{
+    color: black;
+}
+
+
+hr {
+    border: 1px solid #000; /* Ganti warna, lebar, dan gaya garis sesuai kebutuhan */
+}
+
+
+
+.social-links a {
+    font-size: 10px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000000;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover {
+    color: #24262b;
+    background-color: #85DAC8;
+}
+
+
+/* akhir */
+
+
+/* tombol Accept nya */
+
+#oktolak{
+    margin-left: 210px;
+    padding-top: 30px;
+}
+
+#terima{
+    width: 170px;
+    height: 40px;;
+}
+
+#tolak{
+    width: 170px;
+    height: 40px;
+}
+
+
+
