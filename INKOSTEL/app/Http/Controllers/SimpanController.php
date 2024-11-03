@@ -59,17 +59,21 @@ class SimpanController extends Controller
     }
 
 
-    public function hapusSimpan($id)
+    public function hapusSimpan(Request $request, $id)
     {
-        // Cari dan hapus data bookmark berdasarkan ID
+        // Cek konfirmasi dari input pengguna
+        if ($request->input('confirm_delete') !== 'yes') {
+            return redirect()->back()->with('error', 'Konfirmasi penghapusan diperlukan.');
+        }
+
+        // Cari dan hapus data kos berdasarkan ID
         $bookmark = Simpan::find($id);
         if ($bookmark) {
             $bookmark->delete();
-            return redirect()->route('simpan.halaman')->with('success', 'Data berhasil dihapus.');
+            return redirect()->route('simpan.halaman')->with('success', 'Data kos berhasil dihapus.');
         }
 
-        // Jika data tidak ditemukan
-        return redirect()->route('simpan.halaman')->with('error', 'Data tidak ditemukan.');
+        return redirect()->route('simpan.halaman')->with('error', 'Data kos tidak ditemukan.');
     }
     
 }
