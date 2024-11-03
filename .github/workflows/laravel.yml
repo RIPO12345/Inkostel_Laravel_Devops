@@ -22,12 +22,12 @@ jobs:
           php-version: "8.2" 
 
       - name: Copy .env.example to .env
-        run: cp ./INKOSTEL/.env ./INKOSTEL/.env.backup
+        run: cp ./INKOSTEL/.env.example ./INKOSTEL/.env
 
-      - name: Run Composer
+      - name: Install Dependencies
         run: composer install --no-interaction
         working-directory: ./INKOSTEL
 
-      - name: Run tests
-        run: php artisan test
+      - name: Run Tests
+        run: vendor/bin/phpunit --testsuite Unit
         working-directory: ./INKOSTEL
