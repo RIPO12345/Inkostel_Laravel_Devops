@@ -22,7 +22,7 @@ jobs:
           php-version: "8.2" 
 
       - name: Copy .env.example to .env
-        run: cp ./INKOSTEL/.env.example ./INKOSTEL/.env
+        run: cp ./INKOSTEL/.env ./INKOSTEL/.env.backup
 
       - name: Run Composer
         run: composer install --no-interaction
