@@ -24,7 +24,7 @@ jobs:
       - name: Copy .env.example to .env
         run: cp ./INKOSTEL/.env.example ./INKOSTEL/.env
 
-      - name: Install Dependencies
+      - name: Run Composer
         run: composer install --no-interaction
         working-directory: ./INKOSTEL
 
